@@ -7,7 +7,7 @@ import { ChartContainer } from "@/components/dashboard/ChartContainer";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { RecentCampaigns } from "@/components/dashboard/RecentCampaigns";
 import { CampaignPerformance } from "@/components/dashboard/CampaignPerformance";
-import { ArrowUp, ArrowDown, TrendingUp, MessageSquare } from "lucide-react"; // Added MessageSquare
+import { ArrowUp, ArrowDown, TrendingUp, MessageSquare } from "lucide-react";
 import { AIAnalysis } from "@/components/dashboard/AIAnalysis";
 
 const Index = () => {
@@ -44,6 +44,22 @@ const Index = () => {
         />
       </div>
 
+      {/* Análise com IA - Full Width with Icons in Title - MOVED UP */}
+      <div className="grid grid-cols-1 gap-6 mb-6">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <span>Análise com IA</span> {/* RENAMED HERE */}
+              <MessageSquare className="h-5 w-5 text-blue-500" aria-label="Ícone de Analista" />
+              <TrendingUp className="h-5 w-5 text-green-500" aria-label="Ícone de Gestor" />
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <AIAnalysis />
+          </CardContent>
+        </Card>
+      </div>
+      
       {/* Performance das Campanhas - Full Width */}
       <div className="grid grid-cols-1 gap-6 mb-6">
         <Card>
@@ -61,22 +77,6 @@ const Index = () => {
           </CardHeader>
           <CardContent>
             <ChartContainer />
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Análise de IA - Full Width with Icons in Title */}
-      <div className="grid grid-cols-1 gap-6 mb-6">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <span>Análise de IA</span>
-              <MessageSquare className="h-5 w-5 text-blue-500" aria-label="Ícone de Analista" />
-              <TrendingUp className="h-5 w-5 text-green-500" aria-label="Ícone de Gestor" />
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <AIAnalysis />
           </CardContent>
         </Card>
       </div>
