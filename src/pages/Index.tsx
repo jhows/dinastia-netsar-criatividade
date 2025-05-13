@@ -7,7 +7,7 @@ import { ChartContainer } from "@/components/dashboard/ChartContainer";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { RecentCampaigns } from "@/components/dashboard/RecentCampaigns";
 import { CampaignPerformance } from "@/components/dashboard/CampaignPerformance";
-import { ArrowUp, ArrowDown, TrendingUp } from "lucide-react";
+import { ArrowUp, ArrowDown, TrendingUp, MessageSquare } from "lucide-react"; // Added MessageSquare
 import { AIAnalysis } from "@/components/dashboard/AIAnalysis";
 
 const Index = () => {
@@ -44,8 +44,9 @@ const Index = () => {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-        <Card className="lg:col-span-2">
+      {/* Performance das Campanhas - Full Width */}
+      <div className="grid grid-cols-1 gap-6 mb-6">
+        <Card>
           <CardHeader>
             <CardTitle className="flex justify-between items-center">
               <span>Performance das Campanhas</span>
@@ -62,10 +63,17 @@ const Index = () => {
             <ChartContainer />
           </CardContent>
         </Card>
+      </div>
 
+      {/* Análise de IA - Full Width with Icons in Title */}
+      <div className="grid grid-cols-1 gap-6 mb-6">
         <Card>
           <CardHeader>
-            <CardTitle>Análise de IA</CardTitle>
+            <CardTitle className="flex items-center gap-2">
+              <span>Análise de IA</span>
+              <MessageSquare className="h-5 w-5 text-blue-500" aria-label="Ícone de Analista" />
+              <TrendingUp className="h-5 w-5 text-green-500" aria-label="Ícone de Gestor" />
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <AIAnalysis />
@@ -73,22 +81,23 @@ const Index = () => {
         </Card>
       </div>
 
+      {/* Performance por Criativo first, then Campanhas Recentes */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Campanhas Recentes</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <RecentCampaigns />
-          </CardContent>
-        </Card>
-
         <Card>
           <CardHeader>
             <CardTitle>Performance por Criativo</CardTitle>
           </CardHeader>
           <CardContent>
             <CampaignPerformance />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Campanhas Recentes</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <RecentCampaigns />
           </CardContent>
         </Card>
       </div>
