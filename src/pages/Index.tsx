@@ -7,8 +7,8 @@ import { ChartContainer } from "@/components/dashboard/ChartContainer";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { RecentCampaigns } from "@/components/dashboard/RecentCampaigns";
 import { CampaignPerformance } from "@/components/dashboard/CampaignPerformance";
-import { RobotStatus } from "@/components/dashboard/RobotStatus";
 import { ArrowUp, ArrowDown, TrendingUp } from "lucide-react";
+import { AIAnalysis } from "@/components/dashboard/AIAnalysis";
 
 const Index = () => {
   return (
@@ -65,10 +65,10 @@ const Index = () => {
 
         <Card>
           <CardHeader>
-            <CardTitle>Status dos Robôs</CardTitle>
+            <CardTitle>Análise de IA</CardTitle>
           </CardHeader>
           <CardContent>
-            <RobotStatus />
+            <AIAnalysis />
           </CardContent>
         </Card>
       </div>

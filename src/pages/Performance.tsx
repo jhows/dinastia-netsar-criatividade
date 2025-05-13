@@ -8,6 +8,7 @@ import { PerformanceChart } from "@/components/performance/PerformanceChart";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { PerformanceMetrics } from "@/components/performance/PerformanceMetrics";
+import { CampaignAnalysis } from "@/components/performance/CampaignAnalysis";
 
 const Performance = () => {
   return (
@@ -74,13 +75,13 @@ const Performance = () => {
         
         <Card>
           <CardHeader>
-            <CardTitle>Insights de Criativos</CardTitle>
+            <CardTitle>Análise de Campanha</CardTitle>
             <CardDescription>
-              Recomendações baseadas no desempenho
+              Insights gerados por IA
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <CreativeInsights />
+            <CampaignAnalysis />
           </CardContent>
         </Card>
       </div>
