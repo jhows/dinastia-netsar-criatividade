@@ -17,12 +17,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <header className="h-16 border-b border-border flex items-center px-6 sticky top-0 bg-background/95 backdrop-blur-sm z-10">
             <SidebarTrigger />
             <div className="ml-4 flex-1">
-              <h1 className="text-xl font-bold">Dinastia Netsar</h1>
+              <h1 className="text-xl font-bold">SGC Flows</h1>
             </div>
             <div className="flex items-center gap-4">
               <ThemeToggle />
               <div className="w-10 h-10 rounded-full bg-dinastia-100 flex items-center justify-center">
-                <span className="font-medium text-dinastia-600">DN</span>
+                <span className="font-medium text-dinastia-600">SC</span>
               </div>
             </div>
           </header>
