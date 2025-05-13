@@ -1,64 +1,64 @@
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MessageSquare, TrendingUp } from "lucide-react";
+import { UserRound } from "lucide-react";
 
 export function AIAnalysis() {
   return (
-    <Tabs defaultValue="analista" className="space-y-4">
-      <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="analista">
-          <div className="flex items-center gap-2">
-            <MessageSquare className="h-4 w-4" />
-            <span>Analista</span>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Seção do Analista */}
+      <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow bg-white dark:bg-gray-800">
+        <div className="flex items-center mb-3">
+          <UserRound className="h-10 w-10 mr-3 text-blue-500 p-1 bg-blue-100 dark:bg-blue-900 rounded-full" />
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Análise do Analista</h3>
+            <p className="text-xs text-muted-foreground">Insights detalhados</p>
           </div>
-        </TabsTrigger>
-        <TabsTrigger value="gestor">
-          <div className="flex items-center gap-2">
-            <TrendingUp className="h-4 w-4" />
-            <span>Gestor</span>
-          </div>
-        </TabsTrigger>
-      </TabsList>
-      
-      <TabsContent value="analista" className="space-y-4">
-        <div className="space-y-2 text-sm">
+        </div>
+        <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <p>
-            <span className="font-semibold">Análise de performance:</span> Os anúncios 
+            <span className="font-semibold text-gray-800 dark:text-gray-100">Análise de performance:</span> Os anúncios 
             de vídeo estão tendo melhor desempenho que imagens estáticas, com CTR 
             médio 40% maior.
           </p>
           <p>
-            <span className="font-semibold">Oportunidade:</span> Três campanhas 
+            <span className="font-semibold text-gray-800 dark:text-gray-100">Oportunidade:</span> Três campanhas 
             precisam de ajustes nos orçamentos para melhor escala, especialmente 
             a campanha "Lead Magnet Programação".
           </p>
           <p>
-            <span className="font-semibold">Criativos:</span> O "Vídeo Depoimento João" 
+            <span className="font-semibold text-gray-800 dark:text-gray-100">Criativos:</span> O "Vídeo Depoimento João" 
             é o criativo com melhor performance. Recomendo produzir mais conteúdos 
             com depoimentos.
           </p>
         </div>
-      </TabsContent>
-      
-      <TabsContent value="gestor" className="space-y-4">
-        <div className="space-y-2 text-sm">
+      </div>
+
+      {/* Seção do Gestor */}
+      <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow bg-white dark:bg-gray-800">
+        <div className="flex items-center mb-3">
+          <UserRound className="h-10 w-10 mr-3 text-green-500 p-1 bg-green-100 dark:bg-green-900 rounded-full" />
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Análise do Gestor</h3>
+            <p className="text-xs text-muted-foreground">Visão estratégica</p>
+          </div>
+        </div>
+        <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <p>
-            <span className="font-semibold">Visão geral:</span> O ROI apresentou 
+            <span className="font-semibold text-gray-800 dark:text-gray-100">Visão geral:</span> O ROI apresentou 
             crescimento de 23% neste mês, indicando bom retorno dos investimentos em 
             marketing.
           </p>
           <p>
-            <span className="font-semibold">Recomendação:</span> Aumentar o orçamento 
+            <span className="font-semibold text-gray-800 dark:text-gray-100">Recomendação:</span> Aumentar o orçamento 
             em 15% para as campanhas de vídeo com foco em conversão, que estão 
             mostrando ROAS acima de 3.0.
           </p>
           <p>
-            <span className="font-semibold">Projeção:</span> Mantendo a estratégia atual, 
+            <span className="font-semibold text-gray-800 dark:text-gray-100">Projeção:</span> Mantendo a estratégia atual, 
             podemos esperar um aumento de 30% nas vendas no próximo trimestre, desde 
             que continue o investimento em criativos de alta performance.
           </p>
         </div>
-      </TabsContent>
-    </Tabs>
+      </div>
+    </div>
   );
 }
